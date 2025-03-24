@@ -1,1 +1,324 @@
+//make players 
+class MakePlayers {
+	constructor (playerName, playerAssignedShape){
+		this.name = playerName
+		this.shape = playerAssignedShape
+		
+	}
+}
+let playerOne = new MakePlayers ('Player One','✖️' )
+let  playerTwo = new MakePlayers ('Player Two', '⭕')
+
+//make board 
+class MakeBoard {
+constructor (){
+	this.square1 = 1
+	this.square2 = 2
+	this.square3 = 3
+	this.square4 = 4
+	this.square5 = 5
+	this.square6 = 6
+	this.square7 = 7
+	this.square8 = 8
+	this.square9 = 9
+}
+}
+let board = new MakeBoard ()
+const theGame = document.querySelector('.theGame')
+// make click events, to place x or o in squares ,  this is where I have been struggling 
+
+
+
+
+	
+
+
+//Below is my thought process: 
+
+/*pseudo code from class : 
+// make two players
+class  TicTacToePlayers {
+	constructor (playerName, assignedShape, playerWins)
+	this.name = playerName
+	this.shape = assignedShape
+	this.wins = playerWins
+	
+}
+score (tracker){
+	this.wins +=1
+	document.querySelector('h2').innerText = `${this.shape} WON. ${this.name} has ${this.wins} wins of ${numberOfGames} games`;
+}
+}
+let playerOne = new TicTac ('player one', '✖️', 0 )
+let playerTwo = new TicTac ('player two', '⭕', 0 )
+/
+
+
+let  playerOne = {
+	x: "✖️"
+}
+let playerTwo = {
+	o: "⭕"
+}
+const board = {
+	TR: "1",
+	TC: "2",
+	TL: "3",
+	MR: "4",
+	MC: "5",
+	ML: "6",
+	BR: "7",
+	BC: "8",
+	BL: "9",
+	
+
+}
+console.log(playerOne)
+console.log(playerTwo)
+console.log(board)
+const squares = Object.values(board)
+const firstPlayer = Object.value(playerOne)
+const  secondPlayer = Object.value (playerTwo)
+document.getElementById('#one').addEventListener('click', ticOrTac)
+
+function ticOrTac() {
+	if (firstshape ===firstshape){
+document.querySelector('div').innerText
+	}
+	else if ( secondshape === secondshape){
+		document.querySelector('div').innerText	
+	} 
+}
+
+
+
+//pseudo code 
+//create board using html and css: done
+//create an object that includes player, assign shape, and win conditions:  done?
+/*class TicTacToe {
+	constructor (shape, board, win){
+	this.shape = 
+	this.board = [
+		[ "1", "2", "3", "4", "5","6","7", "8","9",]
+
+	]
+	this.win = 
+	
+	
+}
+	playerName(){
+		document.querySelector('h2').innerHTML = (`${this.player}`)
+	}
+	playerShape(){
+		document.querySelector('div').innerHTML = (`${this.shape}`)
+	}
+	score(){
+		this.wins += 1
+		document.querySelector('h3').innerHTML = (`${this.wins}`)
+	}	
+}
+let playerOne = new TicTacToe ('player one', '✖️', 0 )
+let playerTwo = new TicTacToe ('player two', '⭕', 0 )
+
+
+
+// when you click on the box let the x or the o show 
+//Note: I need help!!
+/*document.querySelector('div').addEventListener('click', ticOrTac)
+function ticOrTac (playerOne){
+	TicTacToe.forEach(element => {
+		displayOne = TicTacToe[1]
+		
+	});
+console.log(displayOne);
+
+	
+
+
+}
+
+
+
+
+
+/*const board = {
+	TR: "1",
+	TC: "2",
+	TL: "3",
+	MR: "4",
+	MC: "5",
+	ML: "6",
+	BR: "7",
+	BC: "8",
+	BL: "9",
+	
+
+}
+
+
+let  playerOne = {
+	x: "✖️"
+}
+let playerTwo = {
+	o: "⭕"
+}
+
+
+console.log(playerOne)
+console.log(playerTwo)
+console.log(board);
+const squares = Object.values(board)
+console.log(squares);
+const firstPlayer = Object.values(playerOne)
+console.log(firstPlayer);
+const secondPlayer = Object.values(playerTwo)
+console.log(secondPlayer);
+
+
+
+
+
+
+function ticOrTacWinner(squares) {
+if (1 === 2 === 3 || 4 === 5 === 6 || 7 === 8 === 9|| 1 === 4=== 7 ||2 === 5 === 8 ||3 === 6=== 9 || 1 === 5 === 9 || 7 === 5 === 3) {
+		document.querySelector('#results').textContent = 'WINNER!'
+	}
+	else {
+		document.querySelector('#results').textContent = 'NEW GAME'	
+	} 
+}
+/*document.querySelector('firstbutton').addEventListener('click', ticOrTac)
+function ticOrTac() {
+	if (firstshape ===firstshape){
+document.querySelector('div').innerText
+	}
+	else if ( secondshape === secondshape){
+		document.querySelector('div').innerText	
+	} 
+}
+document.querySelector('firstbutton').addEventListener('click', ticOrTac)
+function ticOrTac() {
+	if (firstshape ===firstshape){
+document.querySelector('div').innerText
+	}
+	else if ( secondshape === secondshape){
+		document.querySelector('div').innerText	
+	} 
+}
+document.querySelector('firstbutton').addEventListener('click', ticOrTac)
+function ticOrTac() {
+	if (firstshape ===firstshape){
+document.querySelector('div').innerText
+	}
+	else if ( secondshape === secondshape){
+		document.querySelector('div').innerText	
+	} 
+}
+
+
+/*document.querySelector('button').addEventListener('click', playGame)
+function playGame() {
+	let one = ticOrTac()
+	let two = ticOrTac()
+	let three = ticOrTac()
+	let four = ticOrTac()
+	let five = ticOrTac()
+	let six = ticOrTac()
+	let seven = ticOrTac()
+	let eight = ticOrTac()
+	let nine = ticOrTac()
+	document.querySelector('#one').innerHTML = (one)
+	document.querySelector('#two').innerHTML = (two)
+	document.querySelector('#three').innerHTML = (three)
+	document.querySelector('#four').innerHTML = (four)
+	document.querySelector('#five').innerHTML = (five)
+	document.querySelector('#six').innerHTML = (six)
+	document.querySelector('#seven').innerHTML = (seven)
+	document.querySelector('#eight').innerHTML = (eight)
+	document.querySelector('#nine').innerHTML = (nine)
+
+
+
+	if (one === two === three || four === five === six || seven === eight === nine|| one === four === seven ||two === five === eight ||three === six === nine || one === five === nine || seven === five === three) {
+		document.querySelector('#results').innerHTML = 'WINNER!'
+
+	}
+	else {
+		document.querySelector('#results').innerHTML = 'TRY AGAIN!'
+	}
+}
+/*function TicTac (player, shape, wins){
+	this.player =player
+	this.shape = shape
+	this.wins = wins 
+	
+}
+let playerOne = new TicTac ('player one', '✖️', 0 )
+let playerTwo = new TicTac ('player two', '⭕', 0 )
+document.querySelector('div').addEventListener('click', ticTacToe)
+function ticTacToe (){
+
+}
+
+
+/*const shapes = {
+	x: "✖️",
+	o: "⭕"
+}
+console.log(shapes)
+document.querySelector('div').innerText = (`$this.shape`)
+/*
+some puzzle pieces from past activities : 
+
+class MakeCharacter{
+    constructor(kick,punch,specialMove,taunt,level){
+        this.kick = kick
+        this.punch = punch
+        this.specialMove = specialMove
+        this.taunt = taunt
+        this.level = level
+    }
+    sayTaunt(){
+        alert(`${this.taunt}`)
+    }
+    saySpecialMove(){
+        alert(`You can't handle my ${this.specialMove}`)
+    }
+    levelUp(){
+        this.level += 1
+        alert(`My new level is ${this.level}`)
+    }
+}
+
+let ryu = new MakeCharacter('high kick','high punch','HADOUKEEENNNNNN','You smell', 1)
+
+let chunLi = new MakeCharacter('high kick','low punch','Spinning Bird Kick','Scramm Kid',1)
+
+
+function ticTacToe(players, shapes, wins, board) {
+	this.players = players
+	this.shapes = shapes
+	this.wins = wins
+	document.querySelector('div').addEventListener('click', ticTac)
+	function ticTac(board) {
+		if ( 1===2===3 & )
+
+
+	}
+
+
+}
+
+
+
+
+const squares = Object.values(board)
+console.log(squares);
+
+document.querySelector('div').addEventListener('click', ticTac)
+function ticTac() {
+
+
+}*/
+
 
