@@ -1,4 +1,57 @@
-//make players 
+//Trying to make it OOP
+//set shapes on board
+const shapes = {
+    x: '✖️',
+    o: '⭕', 
+
+}
+console.log(shapes)
+const theShapes = Object.values(shapes)
+console.log(theShapes)
+
+
+function ticOrTac () {
+    return theShapes[0]
+
+}
+// add click event and display winner 
+document.querySelector('div').addEventListener('click', playGame)
+function playGame() {
+    let one = ticOrTac()
+	let two = ticOrTac()
+	let three = ticOrTac()
+	let four = ticOrTac()
+	let five = ticOrTac()
+	let six = ticOrTac()
+	let seven = ticOrTac()
+	let eight = ticOrTac()
+	let nine = ticOrTac()
+    document.querySelector('#one').innerText = (one)
+    document.querySelector('#two').innerText = (two)
+    document.querySelector('#three').innerText = (three)
+	document.querySelector('#four').innerText = (four)
+    document.querySelector('#five').innerText = (five)
+    document.querySelector('#six').innerText = (six)
+	document.querySelector('#seven').innerText = (seven)
+    document.querySelector('#eight').innerText = (eight)
+    document.querySelector('#nine').innerText = (nine)
+
+		if (one === two && two === three || four === five && five === six || seven === eight && eight === nine|| one === four && four === seven ||two === five && five === eight ||three === six && six === nine || one === five && five === nine || seven === five && five === three) {
+			 document.querySelector('#results').innerText = 'WINNER!'
+	
+
+    }
+    else {
+        document.querySelector('#results').innerText = 'TRY AGAIN!'
+    }
+}
+
+
+
+
+
+
+/*make players 
 class MakePlayers {
 	constructor (playerName, playerAssignedShape){
 		this.name = playerName
@@ -25,6 +78,7 @@ constructor (){
 }
 let board = new MakeBoard ()
 const theGame = document.querySelector('.theGame')
+
 // make click events, to place x or o in squares ,  this is where I have been struggling 
 
 
@@ -81,7 +135,7 @@ const firstPlayer = Object.value(playerOne)
 const  secondPlayer = Object.value (playerTwo)
 document.getElementById('#one').addEventListener('click', ticOrTac)
 
-function ticOrTac() {
+function ticOrticOrTac () {
 	if (firstshape ===firstshape){
 document.querySelector('div').innerText
 	}
@@ -107,14 +161,14 @@ document.querySelector('div').innerText
 	
 }
 	playerName(){
-		document.querySelector('h2').innerHTML = (`${this.player}`)
+		document.querySelector('h2').innerText = (`${this.player}`)
 	}
 	playerShape(){
-		document.querySelector('div').innerHTML = (`${this.shape}`)
+		document.querySelector('div').innerText = (`${this.shape}`)
 	}
 	score(){
 		this.wins += 1
-		document.querySelector('h3').innerHTML = (`${this.wins}`)
+		document.querySelector('h3').innerText = (`${this.wins}`)
 	}	
 }
 let playerOne = new TicTacToe ('player one', '✖️', 0 )
@@ -188,7 +242,7 @@ if (1 === 2 === 3 || 4 === 5 === 6 || 7 === 8 === 9|| 1 === 4=== 7 ||2 === 5 ===
 	} 
 }
 /*document.querySelector('firstbutton').addEventListener('click', ticOrTac)
-function ticOrTac() {
+function ticOrticOrTac () {
 	if (firstshape ===firstshape){
 document.querySelector('div').innerText
 	}
@@ -197,7 +251,7 @@ document.querySelector('div').innerText
 	} 
 }
 document.querySelector('firstbutton').addEventListener('click', ticOrTac)
-function ticOrTac() {
+function ticOrticOrTac () {
 	if (firstshape ===firstshape){
 document.querySelector('div').innerText
 	}
@@ -206,7 +260,7 @@ document.querySelector('div').innerText
 	} 
 }
 document.querySelector('firstbutton').addEventListener('click', ticOrTac)
-function ticOrTac() {
+function ticOrticOrTac () {
 	if (firstshape ===firstshape){
 document.querySelector('div').innerText
 	}
@@ -218,33 +272,33 @@ document.querySelector('div').innerText
 
 /*document.querySelector('button').addEventListener('click', playGame)
 function playGame() {
-	let one = ticOrTac()
-	let two = ticOrTac()
-	let three = ticOrTac()
-	let four = ticOrTac()
-	let five = ticOrTac()
-	let six = ticOrTac()
-	let seven = ticOrTac()
-	let eight = ticOrTac()
-	let nine = ticOrTac()
-	document.querySelector('#one').innerHTML = (one)
-	document.querySelector('#two').innerHTML = (two)
-	document.querySelector('#three').innerHTML = (three)
-	document.querySelector('#four').innerHTML = (four)
-	document.querySelector('#five').innerHTML = (five)
-	document.querySelector('#six').innerHTML = (six)
-	document.querySelector('#seven').innerHTML = (seven)
-	document.querySelector('#eight').innerHTML = (eight)
-	document.querySelector('#nine').innerHTML = (nine)
+	let one = ticOrticOrTac ()
+	let two = ticOrticOrTac ()
+	let three = ticOrticOrTac ()
+	let four = ticOrticOrTac ()
+	let five = ticOrticOrTac ()
+	let six = ticOrticOrTac ()
+	let seven = ticOrticOrTac ()
+	let eight = ticOrticOrTac ()
+	let nine = ticOrticOrTac ()
+	document.querySelector('#one').innerText = (one)
+	document.querySelector('#two').innerText = (two)
+	document.querySelector('#three').innerText = (three)
+	document.querySelector('#four').innerText = (four)
+	document.querySelector('#five').innerText = (five)
+	document.querySelector('#six').innerText = (six)
+	document.querySelector('#seven').innerText = (seven)
+	document.querySelector('#eight').innerText = (eight)
+	document.querySelector('#nine').innerText = (nine)
 
 
 
 	if (one === two === three || four === five === six || seven === eight === nine|| one === four === seven ||two === five === eight ||three === six === nine || one === five === nine || seven === five === three) {
-		document.querySelector('#results').innerHTML = 'WINNER!'
+		document.querySelector('#results').innerText = 'WINNER!'
 
 	}
 	else {
-		document.querySelector('#results').innerHTML = 'TRY AGAIN!'
+		document.querySelector('#results').innerText = 'TRY AGAIN!'
 	}
 }
 /*function TicTac (player, shape, wins){
@@ -316,7 +370,7 @@ const squares = Object.values(board)
 console.log(squares);
 
 document.querySelector('div').addEventListener('click', ticTac)
-function ticTac() {
+function ticticOrTac () {
 
 
 }*/
