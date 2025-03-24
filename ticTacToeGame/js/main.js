@@ -198,8 +198,12 @@ function threeInARow() {
 //document.querySelector('#results').innerText = ('TRY AGAIN!')
 //}
 function displayWinningResults() {
-	document.querySelector('#results').innerText = ('WINNER!')
+	document.querySelector('#results').innerText = ("YOU WIN!")//I need to work it saying X or O wins 
+	
 }
+
+
+
 ///--- THIS IS FOR THE O section 
 
 /*document.querySelector('#one').addEventListener('dblclick', playGameOne)
