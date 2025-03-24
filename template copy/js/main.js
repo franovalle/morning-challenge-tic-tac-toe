@@ -3,8 +3,8 @@
 
 
 const players = {
-    playerOne: '✖️',
-    playerTwo: '⭕', 
+	playerOne: '✖️',
+	playerTwo: '⭕',
 
 }
 console.log(players)
@@ -12,20 +12,119 @@ const thePlayers = Object.values(players)
 console.log(thePlayers)
 
 
-function theFirstPlayer () {
-    return thePlayers[0]
+function theFirstPlayer() {
+	return thePlayers[0]
 
 }
-function theSecondPlayer () {
-    return thePlayers[1]
+function theSecondPlayer() {
+	return thePlayers[1]
 
 }
 
+document.querySelector('#one').addEventListener('click', playGameOne)
+function playGameOne() {
+	let one = theFirstPlayer() 
+	document.querySelector('#one').innerText = (one)
+	threeInARow()
+	
+	
+}
 
-// add click event and display winner 
-document.querySelector('div').addEventListener('click', playGame)
+document.querySelector('#two').addEventListener('click', playGameTwo)
+function playGameTwo() {
+	let two = theFirstPlayer()
+	document.querySelector('#two').innerText = (two)
+	threeInARow()
+	
+}
+
+document.querySelector('#three').addEventListener('click', playGameThree)
+function playGameThree() {
+	let three = theFirstPlayer()
+	document.querySelector('#three').innerText = (three)
+	threeInARow()
+	
+}
+
+document.querySelector('#four').addEventListener('click', playGameFour)
+function playGameFour() {
+	let four = theFirstPlayer()
+	document.querySelector('#four').innerText = (four)
+	threeInARow()
+	
+}
+
+document.querySelector('#five').addEventListener('click', playGameFive)
+function playGameFive() {
+	let five = theFirstPlayer()
+	document.querySelector('#five').innerText = (five)
+	threeInARow()
+
+}
+
+document.querySelector('#six').addEventListener('click', playGameSix)
+function playGameSix() {
+	let six = theFirstPlayer()
+	document.querySelector('#six').innerText = (six)
+	threeInARow()
+
+}
+
+document.querySelector('#seven').addEventListener('click', playGameSeven)
+function playGameSeven() {
+	let seven = theFirstPlayer()
+	document.querySelector('#seven').innerText = (seven)
+	threeInARow()
+}
+
+document.querySelector('#eight').addEventListener('click', playGameEight)
+function playGameEight() {
+	let eight = theFirstPlayer()
+	document.querySelector('#eight').innerText = (eight)
+	threeInARow()
+}
+
+document.querySelector('#nine').addEventListener('click', playGameNine)
+function playGameNine() {
+	let nine = theFirstPlayer()
+	document.querySelector('#nine').innerText = (nine)
+	threeInARow()
+}
+
+function threeInARow() {
+	let one = document.querySelector('#one').innerText
+	let two = document.querySelector('#two').innerText
+	let three = document.querySelector('#three').innerText
+	let four = document.querySelector('#four').innerText
+	let five = document.querySelector('#five').innerText
+	let six = document.querySelector('#six').innerText
+	let seven = document.querySelector('#seven').innerText
+	let eight = document.querySelector('#eight').innerText
+	let nine = document.querySelector('#nine').innerText
+	
+   if (one === two && two === three && one !== '' || four === five && five === six && four !== ''|| seven === eight && eight === nine && seven !== '' || one === four && four === seven && one !== ''|| two === five && five === eight && two !== ''|| three === six && six === nine && three !== '' || one === five && five === nine && one !== '' || seven === five && five === three && seven !== '') {
+		displayWinningResults()
+
+	}
+	else {
+		//displayLosingResults()
+	}
+	
+}
+
+//function displayLosingResults() {
+	//document.querySelector('#results').innerText = ('TRY AGAIN!')
+//}
+function displayWinningResults() {
+	document.querySelector('#results').innerText = ('WINNER!')
+}
+
+
+
+/*add click event and display winner 
+document.querySelector('#one').addEventListener('click', playGame)
 function playGame() {
-    let one = theFirstPlayer()
+	let one = theFirstPlayer()
 	let two = theFirstPlayer()
 	let three = theFirstPlayer()
 	let four = theFirstPlayer()
@@ -34,24 +133,24 @@ function playGame() {
 	let seven = theFirstPlayer()
 	let eight = theFirstPlayer()
 	let nine = theFirstPlayer()
-    document.querySelector('#one').innerText = (one)
-    document.querySelector('#two').innerText = (two)
-    document.querySelector('#three').innerText = (three)
+	document.querySelector('#one').innerText = (one)
+	document.querySelector('#two').innerText = (two)
+	document.querySelector('#three').innerText = (three)
 	document.querySelector('#four').innerText = (four)
-    document.querySelector('#five').innerText = (five)
-    document.querySelector('#six').innerText = (six)
+	document.querySelector('#five').innerText = (five)
+	document.querySelector('#six').innerText = (six)
 	document.querySelector('#seven').innerText = (seven)
-    document.querySelector('#eight').innerText = (eight)
-    document.querySelector('#nine').innerText = (nine)
+	document.querySelector('#eight').innerText = (eight)
+	document.querySelector('#nine').innerText = (nine)
 
 		if (one === two && two === three || four === five && five === six || seven === eight && eight === nine|| one === four && four === seven ||two === five && five === eight ||three === six && six === nine || one === five && five === nine || seven === five && five === three) {
 			 document.querySelector('#results').innerText = 'WINNER!'
 	
 
-    }
-    else {
-        document.querySelector('#results').innerText = 'TRY AGAIN!'
-    }
+	}
+	else {
+		document.querySelector('#results').innerText = 'TRY AGAIN!'
+	}
 }
 
 
@@ -138,9 +237,9 @@ const board = {
 console.log(playerOne)
 console.log(playerTwo)
 console.log(board)
-const squares = Object.values(board)
-const firstPlayer = Object.value(playerOne)
-const  secondPlayer = Object.value (playerTwo)
+const squares = Object.innerTexts(board)
+const firstPlayer = Object.innerText(playerOne)
+const  secondPlayer = Object.innerText (playerTwo)
 document.getElementById('#one').addEventListener('click', theFirstPlayer)
 
 function ticOrticOrTac () {
@@ -229,11 +328,11 @@ let playerTwo = {
 console.log(playerOne)
 console.log(playerTwo)
 console.log(board);
-const squares = Object.values(board)
+const squares = Object.innerTexts(board)
 console.log(squares);
-const firstPlayer = Object.values(playerOne)
+const firstPlayer = Object.innerTexts(playerOne)
 console.log(firstPlayer);
-const secondPlayer = Object.values(playerTwo)
+const secondPlayer = Object.innerTexts(playerTwo)
 console.log(secondPlayer);
 
 
@@ -333,23 +432,23 @@ document.querySelector('div').innerText = (`$this.shape`)
 some puzzle pieces from past activities : 
 
 class MakeCharacter{
-    constructor(kick,punch,specialMove,taunt,level){
-        this.kick = kick
-        this.punch = punch
-        this.specialMove = specialMove
-        this.taunt = taunt
-        this.level = level
-    }
-    sayTaunt(){
-        alert(`${this.taunt}`)
-    }
-    saySpecialMove(){
-        alert(`You can't handle my ${this.specialMove}`)
-    }
-    levelUp(){
-        this.level += 1
-        alert(`My new level is ${this.level}`)
-    }
+	constructor(kick,punch,specialMove,taunt,level){
+		this.kick = kick
+		this.punch = punch
+		this.specialMove = specialMove
+		this.taunt = taunt
+		this.level = level
+	}
+	sayTaunt(){
+		alert(`${this.taunt}`)
+	}
+	saySpecialMove(){
+		alert(`You can't handle my ${this.specialMove}`)
+	}
+	levelUp(){
+		this.level += 1
+		alert(`My new level is ${this.level}`)
+	}
 }
 
 let ryu = new MakeCharacter('high kick','high punch','HADOUKEEENNNNNN','You smell', 1)
@@ -374,11 +473,43 @@ function ticTacToe(players, shapes, wins, board) {
 
 
 
-const squares = Object.values(board)
+const squares = Object.innerTexts(board)
 console.log(squares);
 
 document.querySelector('div').addEventListener('click', ticTac)
 function ticticOrTac () {
+
+
+document.querySelector('#one').addEventListener('click', playGame)
+function playGame() {
+	let one = theFirstPlayer()
+	let two = theFirstPlayer()
+	let three = theFirstPlayer()
+	let four = theFirstPlayer()
+	let five = theFirstPlayer()
+	let six = theFirstPlayer()
+	let seven = theFirstPlayer()
+	let eight = theFirstPlayer()
+	let nine = theFirstPlayer()
+	document.querySelector('#one').innerText = (one)
+	document.querySelector('#two').innerText = (two)
+	document.querySelector('#three').innerText = (three)
+	document.querySelector('#four').innerText = (four)
+	document.querySelector('#five').innerText = (five)
+	document.querySelector('#six').innerText = (six)
+	document.querySelector('#seven').innerText = (seven)
+	document.querySelector('#eight').innerText = (eight)
+	document.querySelector('#nine').innerText = (nine)
+
+		if (one === two && two === three || four === five && five === six || seven === eight && eight === nine|| one === four && four === seven ||two === five && five === eight ||three === six && six === nine || one === five && five === nine || seven === five && five === three) {
+			 document.querySelector('#results').innerText = 'WINNER!'
+	
+
+	}
+	else {
+		document.querySelector('#results').innerText = 'TRY AGAIN!'
+	}
+}
 
 
 }*/
