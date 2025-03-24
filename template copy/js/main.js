@@ -5,6 +5,8 @@
 const players = {
 	playerOne: '✖️',
 	playerTwo: '⭕',
+	whoseTurn: 0
+
 
 }
 console.log(players)
@@ -23,70 +25,249 @@ function theSecondPlayer() {
 
 document.querySelector('#one').addEventListener('click', playGameOne)
 function playGameOne() {
-	let one = theFirstPlayer() 
-	document.querySelector('#one').innerText = (one)
+	players.whoseTurn++
+	if (players.whoseTurn === 1) {
+		let one = theFirstPlayer()
+		document.querySelector('#one').innerText = (one)
+	}
+	else if (players.whoseTurn === 2){
+		let one =  theSecondPlayer()
+		players.whoseTurn = 0 
+		document.querySelector('#one').innerText = (one)
+	}
+
 	threeInARow()
-	
-	
+
+
 }
 
 document.querySelector('#two').addEventListener('click', playGameTwo)
 function playGameTwo() {
-	let two = theFirstPlayer()
-	document.querySelector('#two').innerText = (two)
-	threeInARow()
+	players.whoseTurn++
+	if (players.whoseTurn === 1) {
+		let two = theFirstPlayer()
+		document.querySelector('#two').innerText = (two)
+	}
+	else if (players.whoseTurn === 2){
+		let two =  theSecondPlayer()
+		players.whoseTurn = 0 
+		document.querySelector('#two').innerText = (two)
+	}
 	
+	threeInARow()
+
 }
 
 document.querySelector('#three').addEventListener('click', playGameThree)
 function playGameThree() {
-	let three = theFirstPlayer()
-	document.querySelector('#three').innerText = (three)
-	threeInARow()
+	players.whoseTurn++
+	if (players.whoseTurn === 1) {
+		let three = theFirstPlayer()
+		document.querySelector('#three').innerText = (three)
+	}
+	else if (players.whoseTurn === 2){
+		let three =  theSecondPlayer()
+		players.whoseTurn = 0 
+		document.querySelector('#three').innerText = (three)
+	}
 	
+	threeInARow()
+
 }
 
 document.querySelector('#four').addEventListener('click', playGameFour)
 function playGameFour() {
-	let four = theFirstPlayer()
-	document.querySelector('#four').innerText = (four)
-	threeInARow()
+	players.whoseTurn++
+	if (players.whoseTurn === 1) {
+		let four = theFirstPlayer()
+		document.querySelector('#four').innerText = (four)
+	}
+	else if (players.whoseTurn === 2){
+		let four =  theSecondPlayer()
+		players.whoseTurn = 0 
+		document.querySelector('#four').innerText = (four)
+	}
 	
+	threeInARow()
+
 }
 
 document.querySelector('#five').addEventListener('click', playGameFive)
 function playGameFive() {
-	let five = theFirstPlayer()
-	document.querySelector('#five').innerText = (five)
+	players.whoseTurn++
+	if (players.whoseTurn === 1) {
+		let five = theFirstPlayer()
+		document.querySelector('#five').innerText = (five)
+	}
+	else if (players.whoseTurn === 2){
+		let five =  theSecondPlayer()
+		players.whoseTurn = 0 
+		document.querySelector('#five').innerText = (five)
+	}
+	
 	threeInARow()
-
 }
 
 document.querySelector('#six').addEventListener('click', playGameSix)
 function playGameSix() {
-	let six = theFirstPlayer()
-	document.querySelector('#six').innerText = (six)
+	players.whoseTurn++
+	if (players.whoseTurn === 1) {
+		let six = theFirstPlayer()
+		document.querySelector('#six').innerText = (six)
+	}
+	else if (players.whoseTurn === 2){
+		let six =  theSecondPlayer()
+		players.whoseTurn = 0 
+		document.querySelector('#six').innerText = (six)
+	}
+	
 	threeInARow()
 
 }
 
 document.querySelector('#seven').addEventListener('click', playGameSeven)
 function playGameSeven() {
-	let seven = theFirstPlayer()
-	document.querySelector('#seven').innerText = (seven)
+	players.whoseTurn++
+	if (players.whoseTurn === 1) {
+		let seven = theFirstPlayer()
+		document.querySelector('#seven').innerText = (seven)
+	}
+	else if (players.whoseTurn === 2){
+		let seven =  theSecondPlayer()
+		players.whoseTurn = 0 
+		document.querySelector('#seven').innerText = (seven)
+	}
+	
 	threeInARow()
 }
 
 document.querySelector('#eight').addEventListener('click', playGameEight)
 function playGameEight() {
-	let eight = theFirstPlayer()
-	document.querySelector('#eight').innerText = (eight)
+	players.whoseTurn++
+	if (players.whoseTurn === 1) {
+		let eight = theFirstPlayer()
+		document.querySelector('#eight').innerText = (eight)
+	}
+	else if (players.whoseTurn === 2){
+		let eight =  theSecondPlayer()
+		players.whoseTurn = 0 
+		document.querySelector('#eight').innerText = (eight)
+	}
+	
 	threeInARow()
 }
 
 document.querySelector('#nine').addEventListener('click', playGameNine)
 function playGameNine() {
-	let nine = theFirstPlayer()
+	players.whoseTurn++
+	if (players.whoseTurn === 1) {
+		let nine = theFirstPlayer()
+		document.querySelector('#nine').innerText = (nine)
+	}
+	else if (players.whoseTurn === 2){
+		let nine =  theSecondPlayer()
+		players.whoseTurn = 0 
+		document.querySelector('#nine').innerText = (nine)
+	}
+	
+	threeInARow()
+}
+
+function threeInARow() {
+	let one = document.querySelector('#one').innerText
+	let two = document.querySelector('#two').innerText
+	let three = document.querySelector('#three').innerText
+	let four = document.querySelector('#four').innerText
+	let five = document.querySelector('#five').innerText
+	let six = document.querySelector('#six').innerText
+	let seven = document.querySelector('#seven').innerText
+	let eight = document.querySelector('#eight').innerText
+	let nine = document.querySelector('#nine').innerText
+
+	if (one === two && two === three && one !== '' || four === five && five === six && four !== '' || seven === eight && eight === nine && seven !== '' || one === four && four === seven && one !== '' || two === five && five === eight && two !== '' || three === six && six === nine && three !== '' || one === five && five === nine && one !== '' || seven === five && five === three && seven !== '') {
+		displayWinningResults()
+
+	}
+	else {
+		//displayLosingResults()
+	}
+
+}
+
+//function displayLosingResults() {
+//document.querySelector('#results').innerText = ('TRY AGAIN!')
+//}
+function displayWinningResults() {
+	document.querySelector('#results').innerText = ('WINNER!')
+}
+///--- THIS IS FOR THE O section 
+
+/*document.querySelector('#one').addEventListener('dblclick', playGameOne)
+function playGameOne() {
+	let one = theSecondPlayer()
+	document.querySelector('#one').innerText = (one)
+	threeInARow()
+
+
+}
+
+document.querySelector('#two').addEventListener('dblclick', playGameTwo)
+function playGameTwo() {
+	let two = theSecondPlayer()
+	document.querySelector('#two').innerText = (two)
+	threeInARow()
+
+}
+
+document.querySelector('#three').addEventListener('dblclick', playGameThree)
+function playGameThree() {
+	let three = theSecondPlayer()
+	document.querySelector('#three').innerText = (three)
+	threeInARow()
+
+}
+
+document.querySelector('#four').addEventListener('dblclick', playGameFour)
+function playGameFour() {
+	let four = theSecondPlayer()
+	document.querySelector('#four').innerText = (four)
+	threeInARow()
+
+}
+
+document.querySelector('#five').addEventListener('dblclick', playGameFive)
+function playGameFive() {
+	let five = theSecondPlayer()
+	document.querySelector('#five').innerText = (five)
+	threeInARow()
+
+}
+
+document.querySelector('#six').addEventListener('dblclick', playGameSix)
+function playGameSix() {
+	let six = theSecondPlayer()
+	document.querySelector('#six').innerText = (six)
+	threeInARow()
+
+}
+
+document.querySelector('#seven').addEventListener('dblclick', playGameSeven)
+function playGameSeven() {
+	let seven = theSecondPlayer()
+	document.querySelector('#seven').innerText = (seven)
+	threeInARow()
+}
+
+document.querySelector('#eight').addEventListener('dblclick', playGameEight)
+function playGameEight() {
+	let eight = theSecondPlayer()
+	document.querySelector('#eight').innerText = (eight)
+	threeInARow()
+}
+
+document.querySelector('#nine').addEventListener('dblclick', playGameNine)
+function playGameNine() {
+	let nine = theSecondPlayer()
 	document.querySelector('#nine').innerText = (nine)
 	threeInARow()
 }
@@ -101,24 +282,23 @@ function threeInARow() {
 	let seven = document.querySelector('#seven').innerText
 	let eight = document.querySelector('#eight').innerText
 	let nine = document.querySelector('#nine').innerText
-	
-   if (one === two && two === three && one !== '' || four === five && five === six && four !== ''|| seven === eight && eight === nine && seven !== '' || one === four && four === seven && one !== ''|| two === five && five === eight && two !== ''|| three === six && six === nine && three !== '' || one === five && five === nine && one !== '' || seven === five && five === three && seven !== '') {
+
+	if (one === two && two === three && one !== '' || four === five && five === six && four !== '' || seven === eight && eight === nine && seven !== '' || one === four && four === seven && one !== '' || two === five && five === eight && two !== '' || three === six && six === nine && three !== '' || one === five && five === nine && one !== '' || seven === five && five === three && seven !== '') {
 		displayWinningResults()
 
 	}
 	else {
 		//displayLosingResults()
 	}
-	
+
 }
 
 //function displayLosingResults() {
-	//document.querySelector('#results').innerText = ('TRY AGAIN!')
+//document.querySelector('#results').innerText = ('TRY AGAIN!')
 //}
 function displayWinningResults() {
 	document.querySelector('#results').innerText = ('WINNER!')
 }
-
 
 
 /*add click event and display winner 
