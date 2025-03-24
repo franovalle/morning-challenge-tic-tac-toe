@@ -1,31 +1,39 @@
 //Trying to make it OOP
-//set shapes on board
-const shapes = {
-    x: '✖️',
-    o: '⭕', 
+//set players and shapes 
+
+
+const players = {
+    playerOne: '✖️',
+    playerTwo: '⭕', 
 
 }
-console.log(shapes)
-const theShapes = Object.values(shapes)
-console.log(theShapes)
+console.log(players)
+const thePlayers = Object.values(players)
+console.log(thePlayers)
 
 
-function ticOrTac () {
-    return theShapes[0]
+function theFirstPlayer () {
+    return thePlayers[0]
 
 }
+function theSecondPlayer () {
+    return thePlayers[1]
+
+}
+
+
 // add click event and display winner 
 document.querySelector('div').addEventListener('click', playGame)
 function playGame() {
-    let one = ticOrTac()
-	let two = ticOrTac()
-	let three = ticOrTac()
-	let four = ticOrTac()
-	let five = ticOrTac()
-	let six = ticOrTac()
-	let seven = ticOrTac()
-	let eight = ticOrTac()
-	let nine = ticOrTac()
+    let one = theFirstPlayer()
+	let two = theFirstPlayer()
+	let three = theFirstPlayer()
+	let four = theFirstPlayer()
+	let five = theFirstPlayer()
+	let six = theFirstPlayer()
+	let seven = theFirstPlayer()
+	let eight = theFirstPlayer()
+	let nine = theFirstPlayer()
     document.querySelector('#one').innerText = (one)
     document.querySelector('#two').innerText = (two)
     document.querySelector('#three').innerText = (three)
@@ -133,7 +141,7 @@ console.log(board)
 const squares = Object.values(board)
 const firstPlayer = Object.value(playerOne)
 const  secondPlayer = Object.value (playerTwo)
-document.getElementById('#one').addEventListener('click', ticOrTac)
+document.getElementById('#one').addEventListener('click', theFirstPlayer)
 
 function ticOrticOrTac () {
 	if (firstshape ===firstshape){
@@ -178,8 +186,8 @@ let playerTwo = new TicTacToe ('player two', '⭕', 0 )
 
 // when you click on the box let the x or the o show 
 //Note: I need help!!
-/*document.querySelector('div').addEventListener('click', ticOrTac)
-function ticOrTac (playerOne){
+/*document.querySelector('div').addEventListener('click', theFirstPlayer)
+function theFirstPlayer (playerOne){
 	TicTacToe.forEach(element => {
 		displayOne = TicTacToe[1]
 		
@@ -241,7 +249,7 @@ if (1 === 2 === 3 || 4 === 5 === 6 || 7 === 8 === 9|| 1 === 4=== 7 ||2 === 5 ===
 		document.querySelector('#results').textContent = 'NEW GAME'	
 	} 
 }
-/*document.querySelector('firstbutton').addEventListener('click', ticOrTac)
+/*document.querySelector('firstbutton').addEventListener('click', theFirstPlayer)
 function ticOrticOrTac () {
 	if (firstshape ===firstshape){
 document.querySelector('div').innerText
@@ -250,7 +258,7 @@ document.querySelector('div').innerText
 		document.querySelector('div').innerText	
 	} 
 }
-document.querySelector('firstbutton').addEventListener('click', ticOrTac)
+document.querySelector('firstbutton').addEventListener('click', theFirstPlayer)
 function ticOrticOrTac () {
 	if (firstshape ===firstshape){
 document.querySelector('div').innerText
@@ -259,7 +267,7 @@ document.querySelector('div').innerText
 		document.querySelector('div').innerText	
 	} 
 }
-document.querySelector('firstbutton').addEventListener('click', ticOrTac)
+document.querySelector('firstbutton').addEventListener('click', theFirstPlayer)
 function ticOrticOrTac () {
 	if (firstshape ===firstshape){
 document.querySelector('div').innerText
